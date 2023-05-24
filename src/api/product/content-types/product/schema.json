@@ -4,8 +4,7 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product",
-    "description": ""
+    "displayName": "product"
   },
   "options": {
     "draftAndPublish": true
@@ -30,20 +29,19 @@
       "type": "json"
     },
     "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": true
     },
     "thumbnail": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     },
     "original_price": {
       "type": "decimal"
@@ -57,21 +55,6 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "products"
-    },
-    "yglevodi": {
-      "type": "integer",
-      "default": 3
-    },
-    "jiri": {
-      "type": "integer",
-      "default": 3
-    },
-    "belki": {
-      "type": "integer",
-      "default": 10
-    },
-    "massa": {
-      "type": "integer"
     }
   }
 }
