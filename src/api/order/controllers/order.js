@@ -1,4 +1,3 @@
-("use strict");
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 /**
  * order controller
@@ -40,8 +39,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         allow_promotion_codes: true,
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: process.env.CLIENT_URL + `/success`,
-        cancel_url: process.env.CLIENT_URL + "/failed",
+        success_url: 'http://localhost:3000/success',
+        cancel_url: "http://localhost:3000/failed",
         line_items: lineItems,
       });
 
