@@ -39,8 +39,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         allow_promotion_codes: true,
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: 'http://localhost:3000/success',
-        cancel_url: 'http://localhost:3000/failed',
+        success_url: `process.env.CLIENT_URL/success`,
+        cancel_url: `process.env.CLIENT_URL/failed`,
         line_items: lineItems,
       });
 
